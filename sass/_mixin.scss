@@ -1,0 +1,17 @@
+@mixin h2style {
+  font-size: 2rem;
+  color: $beachOne;
+  font-family: $baseFont;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin h1style {
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-family: $headFont;
+  font-weight: normal;
+  color: $blueOne;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,1590 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Karla:wght@300;400&display=swap");
+
+@import "variable";
+@import "mixin";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: $baseFont;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+//----------STYLE STARTS HERE
+//---------------HEADER STYLE
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url(../images/bg1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  .head_content {
+    width: 100%;
+    max-width: 1250px;
+    padding: 3em 2em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .head_number {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 30%;
+      color: $whiteOne;
+      .head_number_icon {
+        position: relative;
+        margin-right: 1.5em;
+        ion-icon {
+          font-size: 4.3rem;
+          color: $beachOne;
+        }
+        .chat {
+          font-size: 2rem;
+          color: $whiteOne;
+          position: absolute;
+          top: 1px;
+          left: 22px;
+        }
+      }
+      .head_number_txt {
+        font-family: $baseFont;
+        h3 {
+          font-size: 1.4rem;
+          color: $beachOne;
+        }
+        h1 {
+          font-size: 2rem;
+          font-family: $headFont;
+          font-weight: normal;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .head_logo {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .head_logo_icon {
+        margin-right: 0.7em;
+        img {
+          width: 60px;
+        }
+      }
+      .head_logo_txt {
+        color: $whiteOne;
+        h1 {
+          font-size: 2.5rem;
+          font-weight: normal;
+          letter-spacing: 1px;
+          border-bottom: 1px solid $whiteOne;
+          font-family: $headFont;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 1.7rem;
+          font-weight: 300;
+          font-family: $baseFont;
+          text-align: center;
+        }
+      }
+    }
+    .head_mail {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .head_mail_icon {
+        margin-right: 1.5em;
+        ion-icon {
+          font-size: 4.3rem;
+          color: $beachOne;
+        }
+      }
+      .head_mail_txt {
+        h3 {
+          font-size: 1.4rem;
+          color: $beachOne;
+          text-transform: uppercase;
+          font-family: $baseFont;
+          color: $beachOne;
+        }
+        h1 {
+          font-size: 2rem;
+          font-family: $headFont;
+          font-weight: normal;
+          letter-spacing: 1px;
+          color: $whiteOne;
+        }
+      }
+    }
+  }
+  nav {
+    width: 100%;
+    .navbar {
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.8em 1.5em;
+      .nav_items {
+        width: 70%;
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          li {
+            margin-right: 3.5em;
+            a {
+              font-size: 1.6rem;
+              font-family: $baseFont;
+              color: $whiteOne;
+              text-transform: uppercase;
+              font-weight: 700;
+              letter-spacing: 1px;
+              transition: $transition;
+              &:hover {
+                color: $beachOne;
+              }
+            }
+          }
+        }
+      }
+      .search {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .search_icon {
+          margin-right: 1.5em;
+          ion-icon {
+            font-size: 2.5rem;
+            color: $whiteOne;
+          }
+        }
+        .consult_btn {
+          a {
+            font-size: 1.5rem;
+            background: $beachOne;
+            color: $whiteOne;
+            text-transform: uppercase;
+            font-family: $baseFont;
+            padding: 0.88em 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: $transition;
+            &:hover {
+              background: $blueOne;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hero {
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    .hero_banner {
+      text-align: center;
+
+      .hero_logo {
+        width: 100px;
+        margin: 0 auto;
+        img {
+          width: 100px;
+        }
+      }
+      .hero_banner_txt {
+        h1 {
+          font-family: $headFont;
+          color: $whiteOne;
+          font-size: 6rem;
+          text-transform: capitalize;
+          font-weight: normal;
+          padding: 0.38em;
+        }
+      }
+      .hero_banner_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          font-size: 1.6rem;
+          margin-right: 0.1em;
+          color: $whiteOne;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 1px;
+          background: $beachOne;
+          padding: 1em 2em;
+          font-family: $baseFont;
+          transition: $transition;
+          &:hover {
+            background: $whiteOne;
+            color: $blueOne;
+          }
+        }
+        .play_btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: none;
+          ion-icon {
+            font-size: 2.3rem;
+            padding: 0.5em 0.5em;
+            background: $whiteOne;
+            color: $beachOne;
+            transition: $transition;
+            &:hover {
+              border-radius: 50%;
+            }
+          }
+          span {
+            margin-left: 1.2em;
+            p {
+              color: $whiteOne;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+            }
+          }
+          &:hover {
+            background: none;
+            color: none;
+          }
+          &:hover ion-icon {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+//-------------MAIN STYLE
+.main {
+  width: 100%;
+  //height: 400px;
+  padding: 3em 0;
+  background: $blueOne;
+  color: $whiteOne;
+  .main_displays {
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .single_card {
+        width: 33.3%;
+        margin-top: 10em;
+        text-align: center;
+        position: relative;
+        border-right: 1px solid rgba(255, 255, 255, 0.144);
+        .card_bg {
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.082);
+          transform: rotate(44deg);
+          position: absolute;
+          top: -60px;
+          left: 150px;
+        }
+        .card_icon {
+          margin-bottom: 2em;
+          ion-icon {
+            font-size: 8rem;
+            --ionicon-stroke-width: 15px;
+            color: $beachOne;
+          }
+        }
+        .card_txt {
+          padding: 1em 0;
+          h1 {
+            font-size: 3rem;
+            font-family: $headFont;
+            font-weight: normal;
+            margin-bottom: 0.5em;
+            span {
+              color: $beachOne;
+              font-weight: bold;
+              margin-right: 0.2em;
+            }
+          }
+          p {
+            font-size: 1.7rem;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 8em;
+  position: relative;
+  .home_about_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .about_left {
+      width: 55%;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 28px;
+        right: 0;
+        bottom: 0;
+        left: 28px;
+        background: #c7cad0;
+        z-index: -1;
+      }
+    }
+    .about_right {
+      width: 45%;
+      padding-left: 8em;
+      h2 {
+        font-size: 2rem;
+        color: $beachOne;
+        text-transform: uppercase;
+        font-family: $baseFont;
+        letter-spacing: 1px;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $headFont;
+        color: $blueOne;
+        font-weight: 400;
+        position: relative;
+      }
+      p {
+        margin: 0.5em 0;
+        font-size: 1.7rem;
+        text-transform: capitalize;
+        line-height: 25px;
+        color: #868686;
+      }
+      ul {
+        margin-top: 1em;
+        li {
+          margin-top: 1.5em;
+          h3 {
+            font-size: 1.5rem;
+            font-family: $baseFont;
+            color: $blueOne;
+            span {
+              margin-right: 0.3em;
+              ion-icon {
+                font-size: 2rem;
+                color: $beachOne;
+                --ionicon-stroke-width: 35px;
+                margin-bottom: -4px;
+              }
+            }
+          }
+        }
+      }
+      .about_btn {
+        width: 100%;
+        margin: 1.5em 0;
+        padding-top: 3em;
+        a {
+          font-size: 1.5rem;
+          font-family: $baseFont;
+          font-weight: bold;
+          color: $whiteOne;
+          background: $blueOne;
+          text-transform: uppercase;
+          padding: 1em 2em;
+          letter-spacing: 1px;
+          margin-right: 1em;
+          transition: $transition;
+          &:hover {
+            background: $beachOne;
+          }
+        }
+        .read {
+          background: $beachOne;
+          &:hover {
+            background: $blueOne;
+          }
+        }
+      }
+    }
+  }
+  .bg_img1 {
+    width: 23%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.17;
+  }
+}
+
+.services {
+  width: 100%;
+  padding: 8em 0;
+  background: #f2f2f2;
+  .home_services {
+    width: 100%;
+    .services_head {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 6em;
+      h2 {
+        font-size: 2rem;
+        color: $beachOne;
+        font-family: $baseFont;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 0.8em;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $headFont;
+        color: $blueOne;
+        font-weight: 400;
+      }
+    }
+    .services_container {
+      width: 100%;
+      .service_cards {
+        width: 100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        .single_card {
+          width: 370px;
+          height: 120px;
+          background: $whiteOne;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 0 3em;
+          position: relative;
+          margin-bottom: 3.5em;
+          transition: 0.5s all ease-in-out;
+          .card_icon {
+            margin-right: 1.5em;
+            ion-icon {
+              font-size: 4rem;
+              color: $beachOne;
+              background: #f3f3f3;
+              padding: 0.3em;
+              transition: 0.5s all ease-in-out;
+            }
+          }
+          .card_txt {
+            h1 {
+              font-size: 3rem;
+              color: $blueOne;
+              font-family: $headFont;
+              font-weight: normal;
+              text-transform: capitalize;
+              transition: 0.5s all ease-in-out;
+            }
+          }
+          .right_mark {
+            position: absolute;
+            bottom: 20px;
+            right: 35px;
+            font-size: 2.5rem;
+            color: $blueOne;
+            transition: 0.5s all ease-in-out;
+          }
+          &:hover {
+            background: $beachOne;
+          }
+          &:hover .card_txt h1 {
+            color: $whiteOne;
+          }
+          &:hover .card_icon ion-icon {
+            background: $whiteOne;
+          }
+          &:hover .right_mark {
+            color: $whiteOne;
+            transform: rotate(360deg);
+          }
+        }
+      }
+      .services_more {
+        font-size: 1.5rem;
+        font-family: $baseFont;
+        font-weight: bold;
+        padding: 1em 2em;
+        background: $blueOne;
+        color: $whiteOne;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        width: 30%;
+        margin: 3em auto;
+        margin-bottom: 0;
+        transition: $transition;
+        &:hover {
+          background: $beachOne;
+        }
+      }
+    }
+  }
+}
+
+.work {
+  width: 100%;
+  padding: 8em 0;
+  position: relative;
+  .how_work {
+    .work_head {
+      text-align: center;
+      margin-bottom: 6em;
+      h3 {
+        font-size: 2.1rem;
+        color: $beachOne;
+        text-transform: uppercase;
+        font-family: $baseFont;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $headFont;
+        color: $blueOne;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding-top: 0.4em;
+      }
+    }
+    .work_process {
+      width: 100%;
+      padding-top: 3em;
+      .process_cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .single_proc {
+          text-align: center;
+          display: grid;
+          place-items: center;
+          .icon {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #c7cad0;
+            display: grid;
+            place-items: center;
+            margin-bottom: 2em;
+            background: $whiteOne;
+            ion-icon {
+              font-size: 5rem;
+              color: $beachOne;
+            }
+          }
+          .txt {
+            text-align: center;
+            h1 {
+              font-family: $baseFont;
+              font-size: 1.8rem;
+              text-transform: capitalize;
+              letter-spacing: 0.5px;
+              word-spacing: 2.5px;
+              color: $blueOne;
+            }
+          }
+        }
+        .repeat_icon_cont {
+          margin: 0 2em;
+          ion-icon {
+            font-size: 12rem;
+            margin-bottom: 35px;
+            color: $blueOne;
+            opacity: 0.3;
+            --ionicon-stroke-width: 10px;
+          }
+        }
+      }
+    }
+  }
+  .lady {
+    position: absolute;
+    bottom: 2.5px;
+    left: 3px;
+    width: 188px;
+    z-index: -1;
+    opacity: 0.1;
+  }
+}
+
+.clients {
+  width: 100%;
+  position: relative;
+  margin-top: 8em;
+  .client_say {
+    width: 70%;
+    background: #f3f3f3;
+    margin-left: auto;
+    padding: 3em 0;
+    .our_clients {
+      position: relative;
+      z-index: 1;
+      .client_right {
+        width: 70%;
+        margin-left: auto;
+        padding: 3.5em 0;
+        padding-left: 2em;
+        .reviews_head {
+          h2 {
+            font-size: 2rem;
+            color: $beachOne;
+            font-family: $baseFont;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+          }
+          h1 {
+            display: inline-block;
+            font-size: 5rem;
+            background: $blueOne;
+            color: $whiteOne;
+            font-family: $headFont;
+            font-weight: normal;
+            margin: 0.3em 0;
+            letter-spacing: 0.3px;
+          }
+        }
+        .review {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 5em;
+
+          .review_icon {
+            width: 10%;
+            ion-icon {
+              font-size: 5rem;
+              color: $beachOne;
+              --ionicon-stroke-width: 20px;
+            }
+            position: relative;
+            &::before {
+              content: "";
+              width: 38px;
+              height: 38px;
+              position: absolute;
+              top: -10px;
+              left: -10px;
+              background: $whiteOne;
+              //z-index: -1;
+              border-radius: 3px;
+            }
+          }
+          .review_txt_cont {
+            width: 90%;
+            padding-left: 1em;
+            p {
+              font-size: 1.4rem;
+              font-family: $baseFont;
+              color: #868686;
+              text-transform: uppercase;
+              font-weight: bold;
+              line-height: 2.5rem;
+              font-style: italic;
+              padding-right: 2em;
+              text-align: justify;
+              text-shadow: 0 1px 1px $whiteOne;
+            }
+            .client_profile {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 3em;
+              .client_info {
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .client_pic {
+                  width: 30%;
+                  padding-right: 2em;
+                  img {
+                    border-radius: 10px;
+                  }
+                }
+                .client_name {
+                  width: 70%;
+                  h1 {
+                    font-size: 2rem;
+                    font-family: $headFont;
+                    text-transform: capitalize;
+                    //font-weight: normal;
+                    color: $blueOne;
+                    letter-spacing: 1px;
+                    border-bottom: 3px solid $whiteOne;
+                    display: inline-block;
+                    padding-bottom: 0.3em;
+                    text-shadow: 0 1px 3px $whiteOne;
+                  }
+                  h3 {
+                    font-size: 1.6rem;
+                    font-family: $baseFont;
+                    color: $beachOne;
+                    padding-top: 0.3em;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                    text-shadow: 0 1px 1.5px $whiteOne;
+                  }
+                }
+              }
+              .client_btns {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ion-icon {
+                  font-size: 2.6rem;
+                  color: $whiteOne;
+                  background: $blueOne;
+                  margin-right: 1em;
+                  padding: 0.3em;
+                  border-radius: 5px;
+                  transition: $transition;
+                  &:hover {
+                    background: $beachOne;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .hammer {
+        position: absolute;
+        top: 15px;
+        left: 250px;
+        z-index: -1;
+        width: 560px;
+        opacity: 0.075;
+      }
+    }
+  }
+  .client_left {
+    position: absolute;
+    width: 650px;
+    top: -40px;
+    left: 0;
+  }
+}
+
+.s_f {
+  width: 100%;
+  height: 350px;
+  padding: 2em;
+  background: linear-gradient(rgba(0, 0, 0, 0.68)), url(../images/bappa.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .second_footer {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 6.5rem;
+      font-family: $headFont;
+      color: $whiteOne;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+    a {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $whiteOne;
+      background: $beachOne;
+      padding: 1.3em 2em;
+      font-family: $baseFont;
+      letter-spacing: 2px;
+      border: 1px solid $whiteOne;
+      box-shadow: 0 2px 3px silver;
+      transition: $transition;
+      &:hover {
+        background: $blueOne;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding-top: 8em;
+  background: $blueOne;
+  color: $whiteOne;
+  .web_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 2em;
+    .info_cont {
+      width: 40%;
+      padding-right: 13em;
+      .head_logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 2em;
+        .head_logo_icon {
+          margin-right: 0.7em;
+          img {
+            width: 60px;
+          }
+        }
+        .head_logo_txt {
+          color: $whiteOne;
+          h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            letter-spacing: 1px;
+            border-bottom: 1px solid $whiteOne;
+            font-family: $headFont;
+            text-transform: uppercase;
+          }
+          h3 {
+            font-size: 1.7rem;
+            font-weight: 300;
+            font-family: $baseFont;
+            text-align: center;
+          }
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        font-family: $baseFont;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        margin-bottom: 1.5em;
+        opacity: 0.7;
+      }
+      .contacts {
+        margin-top: 2em;
+        h3 {
+          font-size: 1.7rem;
+          font-family: $headFont;
+          font-weight: normal;
+          margin-bottom: 0.7em;
+          letter-spacing: 1px;
+          span {
+            font-size: 2.3rem;
+            margin-right: 0.5em;
+            color: $beachOne;
+            ion-icon {
+              margin-bottom: -6px;
+            }
+          }
+        }
+      }
+    }
+    .explore {
+      width: 20%;
+      h1 {
+        font-size: 2.3rem;
+        font-family: $headFont;
+        font-weight: normal;
+        letter-spacing: 1px;
+        margin-bottom: 1.7em;
+        text-transform: capitalize;
+        span {
+          font-weight: bold;
+          color: $beachOne;
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 2em;
+          a {
+            font-size: 1.4rem;
+            color: $whiteOne;
+            font-family: $baseFont;
+            text-transform: uppercase;
+            opacity: 0.88;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            transition: $transition;
+            &:hover {
+              color: $beachOne;
+              border-bottom: 1px solid $beachOne;
+              margin-left: 0.7em;
+            }
+          }
+        }
+      }
+    }
+    .news_letter {
+      width: 40%;
+      h1 {
+        font-size: 2.3rem;
+        font-family: $headFont;
+        font-weight: normal;
+        letter-spacing: 1px;
+        margin-bottom: 1.7em;
+        text-transform: capitalize;
+        span {
+          font-weight: bold;
+          color: $beachOne;
+        }
+      }
+      .news_cont {
+        width: 100%;
+        padding: 3em 2.5em;
+        background: $beachOne;
+        p {
+          font-size: 1.3rem;
+          font-family: $baseFont;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+          background: $blueOne;
+          display: inline;
+          padding: 0.3em;
+        }
+        span {
+          margin-top: 2em;
+          display: inline-block;
+          width: 100%;
+          background: $whiteOne;
+          padding: 2em 1.5em;
+          input {
+            width: 70%;
+            border: none;
+            outline: none;
+            padding-bottom: 0.2em;
+            font-size: 1.4rem;
+            font-family: $baseFont;
+            padding-left: 1em;
+            text-transform: capitalize;
+          }
+          a {
+            text-align: center;
+            background: $blueOne;
+            color: $whiteOne;
+            padding: 0.5em 1em;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            font-family: $baseFont;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: $transition;
+            &:hover {
+              background: $beachOne;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sub_foot {
+    text-align: center;
+    padding: 1.6em;
+    margin-top: 3em;
+    //border-top: 1px solid silver;
+    box-shadow: 0 2px 25px black inset;
+    p {
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-family: $headFont;
+      font-weight: normal;
+      font-size: 1.2rem;
+      word-spacing: 2px;
+    }
+  }
+}
+
+//---------------ABOUT US PAGE -----------------
+
+.common_head {
+  width: 100%;
+  height: 300px;
+  padding: 2em 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7)),
+    url(../images/resolution.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .common_header {
+    nav {
+      width: 100%;
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.8em 1.5em;
+        .nav_logo {
+          width: 25%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .head_logo_icon {
+            margin-right: 0.7em;
+            img {
+              width: 50px;
+            }
+          }
+          .head_logo_txt {
+            color: $whiteOne;
+            h1 {
+              font-size: 2.3rem;
+              font-weight: normal;
+              letter-spacing: 1px;
+              border-bottom: 1px solid $whiteOne;
+              font-family: $headFont;
+              text-transform: uppercase;
+            }
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 300;
+              font-family: $baseFont;
+              text-align: center;
+            }
+          }
+        }
+        .nav_items {
+          width: 50%;
+          ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+              margin-right: 3.5em;
+              a {
+                font-size: 1.6rem;
+                font-family: $baseFont;
+                color: $whiteOne;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+                transition: $transition;
+                &:hover {
+                  color: $beachOne;
+                }
+              }
+            }
+          }
+        }
+        .search {
+          width: 25%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .search_icon {
+            margin-right: 1.5em;
+            ion-icon {
+              font-size: 2.5rem;
+              color: $whiteOne;
+            }
+          }
+          .consult_btn {
+            a {
+              font-size: 1.5rem;
+              background: $beachOne;
+              color: $whiteOne;
+              text-transform: uppercase;
+              font-family: $baseFont;
+              padding: 0.88em 2em;
+              font-weight: bold;
+              letter-spacing: 2px;
+              transition: $transition;
+              &:hover {
+                background: $blueOne;
+              }
+            }
+          }
+        }
+      }
+    }
+    .common_header_main {
+      h1 {
+        font-size: 5rem;
+        color: $whiteOne;
+        font-family: $headFont;
+        font-weight: normal;
+        margin-left: 0.6em;
+        border-bottom: 1px solid $whiteOne;
+        display: inline-block;
+        margin-top: 1.2em;
+      }
+    }
+  }
+}
+
+.aboutus {
+  width: 100%;
+  margin: 5.5em 0;
+  .aboutus_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .left {
+      width: 43%;
+    }
+    .right {
+      width: 57%;
+      padding-left: 4em;
+      .right_head {
+        h2 {
+          font-size: 2rem;
+          font-family: $baseFont;
+          color: $beachOne;
+          font-weight: bold;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 0.6em;
+        }
+        h1 {
+          font-size: 5rem;
+          font-family: $headFont;
+          font-weight: normal;
+          color: $blueOne;
+          text-transform: capitalize;
+          padding-bottom: 0.3em;
+        }
+        p {
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+          text-align: justify;
+          color: #868686;
+          font-weight: bold;
+          line-height: 2.3rem;
+        }
+      }
+      .right_footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 5em;
+        .right_left {
+          width: 40%;
+          .experience {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: $blueOne;
+            color: $whiteOne;
+            padding: 2em 1.5em;
+            margin-bottom: 2em;
+            border-radius: 5px;
+            .exp_left {
+              margin-right: 2.5em;
+              h1 {
+                font-size: 3rem;
+                font-family: $baseFont;
+                letter-spacing: 1px;
+              }
+            }
+            .exp_right {
+              h1 {
+                font-size: 2.5rem;
+                font-family: $headFont;
+                font-weight: normal;
+                letter-spacing: 1px;
+              }
+            }
+          }
+          .success {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: $beachOne;
+            color: $whiteOne;
+            padding: 2em 1.5em;
+            border-radius: 5px;
+            .suc_left {
+              margin-right: 2.5em;
+              ion-icon {
+                font-size: 5rem;
+              }
+            }
+            .suc_right {
+              h1 {
+                font-size: 3.5rem;
+                font-family: $baseFont;
+                margin-bottom: 0.1em;
+              }
+              h3 {
+                font-family: $baseFont;
+                font-size: 1.6rem;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+        .right_right {
+          width: 60%;
+          padding-left: 3em;
+        }
+      }
+    }
+  }
+}
+
+.our_vision {
+  width: 100%;
+  margin: 5em 0;
+  margin-top: 10em;
+  .vision_cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .vision_lft {
+      width: 55%;
+      padding-right: 4.3em;
+    }
+    .vision_right {
+      width: 45%;
+      h2 {
+        font-size: 2rem;
+        color: $beachOne;
+        font-family: $baseFont;
+        margin-bottom: 0.5em;
+      }
+      h1 {
+        font-size: 5rem;
+        text-transform: capitalize;
+        font-family: $headFont;
+        font-weight: normal;
+        color: $blueOne;
+        margin-bottom: 0.5em;
+      }
+      h3 {
+        font-size: 1.8rem;
+        font-family: $baseFont;
+        text-transform: capitalize;
+        color: #868686;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 1.5em;
+        span {
+          color: $blueOne;
+          margin-right: 1em;
+          ion-icon {
+            font-size: 3.5rem;
+            margin-bottom: -13px;
+          }
+        }
+      }
+      a {
+        font-size: 1.5rem;
+        margin-top: 0.8em;
+        display: inline-block;
+        font-family: $baseFont;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $whiteOne;
+        padding: 1em 2em;
+        background: $blueOne;
+        transition: $transition;
+        &:hover {
+          background: $beachOne;
+        }
+      }
+    }
+  }
+}
+
+.choose {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7)),
+    url(../images/blackndwhite.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em 0;
+  margin-top: 10em;
+  .choose_us {
+    position: relative;
+    .choose_left {
+      h2 {
+        @include h2style;
+      }
+      h1 {
+        @include h1style;
+        background: $whiteOne;
+        display: inline-block;
+        margin: 0.5em 0;
+      }
+      p {
+        font-size: 2.3rem;
+        color: #c7cad0;
+        font-family: $baseFont;
+        margin-top: 1em;
+        letter-spacing: 1px;
+        font-weight: normal;
+        margin-bottom: 2em;
+      }
+      h3 {
+        font-size: 2rem;
+        font-family: $baseFont;
+        color: $whiteOne;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        margin-bottom: 1em;
+        span {
+          font-size: 2.5rem;
+          color: $beachOne;
+          margin-right: 0.3em;
+          ion-icon {
+            margin-bottom: -6px;
+          }
+        }
+      }
+    }
+    .dark_lib {
+      width: 500px;
+      position: absolute;
+      right: -30px;
+      top: -110px;
+    }
+  }
+}
+
+//---------------CONTACT US PAGE -----------------
+
+.contact_page {
+  width: 100%;
+  padding: 8em 0;
+  .contact_us_cont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2em;
+    .contact_left {
+      width: 40%;
+      margin-right: 3em;
+      background: linear-gradient(#162542c2), url(../images/tie.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: $whiteOne;
+      padding: 6.8em 5em;
+      .add,
+      .phone,
+      .mail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #c7cad0;
+        margin-bottom: 3em;
+        padding-bottom: 1.5em;
+        .icon {
+          margin-right: 1.5em;
+          ion-icon {
+            font-size: 6rem;
+            color: $beachOne;
+          }
+        }
+        .txt {
+          h1 {
+            font-size: 2rem;
+            font-family: $headFont;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            color: $beachOne;
+            margin-bottom: 1em;
+          }
+          p {
+            font-size: 1.7rem;
+            margin-bottom: 0.3em;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .icons {
+        width: 100%;
+        margin-top: 5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1em 4.8em;
+        ion-icon {
+          font-size: 2.5rem;
+          padding: 0.6em;
+          background: $beachOne;
+          transition: $transition;
+          &:hover {
+            background: $whiteOne;
+            color: $blueOne;
+          }
+        }
+      }
+    }
+    .contact_right {
+      width: 60%;
+      box-shadow: 0 0 05px silver;
+      padding: 5em 3em;
+      h2 {
+        @include h2style;
+        text-align: center;
+      }
+      h1 {
+        @include h1style;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .name,
+      .phone {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.7em;
+        margin-bottom: 1.5em;
+        input {
+          background: #f2f2f2;
+          padding: 1.2em 0;
+          border: none;
+          outline: none;
+          font-size: 1.5rem;
+          font-family: $baseFont;
+          padding-left: 1em;
+          text-transform: capitalize;
+        }
+      }
+      textarea {
+        margin-top: 1em;
+        background: #f2f2f2;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 1.5em;
+        text-transform: capitalize;
+        font-family: $baseFont;
+        margin-bottom: 3em;
+      }
+      a {
+        font-family: $baseFont;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: $whiteOne;
+        padding: 1em 2em;
+        background: $beachOne;
+        transition: $transition;
+        &:hover {
+          background: $blueOne;
+        }
+      }
+    }
+  }
+}
+
+.our_services_sec {
+  width: 100%;
+  padding: 6em 0;
+  .services_cont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .services_left {
+      width: 25%;
+      h1 {
+        @include h1style;
+        border-bottom: 1px solid #868686;
+      }
+      ul {
+        padding: 2em 0;
+        li {
+          font-size: 2rem;
+          padding: 1em 0;
+          text-transform: capitalize;
+          font-family: $baseFont;
+          transition: $transition;
+          ion-icon {
+            color: $beachOne;
+            font-size: 2.3rem;
+            margin-right: 0.3em;
+            margin-bottom: -5px;
+          }
+          a {
+            color: #666666;
+            transition: $transition;
+          }
+          &:hover {
+            background: $blueOne;
+          }
+          &:hover a {
+            color: $whiteOne;
+          }
+        }
+      }
+    }
+    .services_right {
+      width: 70%;
+      padding-left: 5em;
+      h2 {
+        @include h2style;
+        margin-top: 1em;
+      }
+      h1 {
+        @include h1style;
+        margin-bottom: 0.5em;
+      }
+      h6 {
+        font-family: $baseFont;
+        color: $blueOne;
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: capitalize;
+        line-height: 2.6rem;
+      }
+      .underline {
+        width: 150px;
+        height: 2px;
+        background: #c7cad0;
+        margin: 2em 0;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+        text-align: justify;
+      }
+    }
+  }
+}
