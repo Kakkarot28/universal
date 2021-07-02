@@ -1701,7 +1701,7 @@ footer {
     .mobile_nav {
       display: block;
       width: 100%;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       z-index: 100;
@@ -1850,7 +1850,7 @@ footer {
       .mobile_nav {
         display: block;
         width: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 100;

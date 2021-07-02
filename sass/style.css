@@ -2212,7 +2212,7 @@ footer .sub_foot p {
   header .mobile_nav {
     display: block;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
@@ -2372,7 +2372,7 @@ footer .sub_foot p {
   .common_head .common_header .mobile_nav {
     display: block;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
