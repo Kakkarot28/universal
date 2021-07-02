@@ -294,10 +294,15 @@ header {
     }
   }
 }
+
+header {
+  .mobile_nav {
+    display: none;
+  }
+}
 //-------------MAIN STYLE
 .main {
   width: 100%;
-  //height: 400px;
   padding: 3em 0;
   background: $blueOne;
   color: $whiteOne;
@@ -1152,6 +1157,11 @@ footer {
     }
   }
 }
+.common_head {
+  .mobile_nav {
+    display: none;
+  }
+}
 
 .aboutus {
   width: 100%;
@@ -1358,8 +1368,7 @@ footer {
         color: #c7cad0;
         font-family: $baseFont;
         margin-top: 1em;
-        letter-spacing: 1px;
-        font-weight: normal;
+        font-weight: 300;
         margin-bottom: 2em;
       }
       h3 {
@@ -1369,13 +1378,14 @@ footer {
         text-transform: capitalize;
         letter-spacing: 1px;
         margin-bottom: 1em;
-        span {
-          font-size: 2.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        ion-icon{
           color: $beachOne;
-          margin-right: 0.3em;
-          ion-icon {
-            margin-bottom: -6px;
-          }
+          font-size: 2.5rem;
+          margin-right: .5em;
+          --ionicon-stroke-width: 65px;
         }
       }
     }
@@ -1499,7 +1509,7 @@ footer {
         font-family: $baseFont;
         margin-bottom: 3em;
       }
-      a {
+      button {
         font-family: $baseFont;
         font-size: 1.5rem;
         text-transform: uppercase;
@@ -1507,6 +1517,8 @@ footer {
         padding: 1em 2em;
         background: $beachOne;
         transition: $transition;
+        border: none;
+        outline: none;
         &:hover {
           background: $blueOne;
         }
@@ -1514,6 +1526,8 @@ footer {
     }
   }
 }
+
+//---------------SERVICES PAGE -----------------
 
 .our_services_sec {
   width: 100%;
@@ -1527,6 +1541,7 @@ footer {
       h1 {
         @include h1style;
         border-bottom: 1px solid #868686;
+        font-size: 4rem;
       }
       ul {
         padding: 2em 0;
@@ -1536,13 +1551,17 @@ footer {
           text-transform: capitalize;
           font-family: $baseFont;
           transition: $transition;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           ion-icon {
+            width: 12%;
             color: $beachOne;
             font-size: 2.3rem;
-            margin-right: 0.3em;
-            margin-bottom: -5px;
+           
           }
           a {
+            width: 88%;
             color: #666666;
             transition: $transition;
           }
@@ -1568,11 +1587,11 @@ footer {
       }
       h6 {
         font-family: $baseFont;
-        color: $blueOne;
-        font-weight: bold;
+        color: $beachOne;
+        font-weight: normal;
         font-size: 2rem;
         text-transform: capitalize;
-        line-height: 2.6rem;
+        line-height: 3.2rem;
       }
       .underline {
         width: 150px;
@@ -1581,10 +1600,922 @@ footer {
         margin: 2em 0;
       }
       p {
-        font-size: 1.4rem;
-        line-height: 2.3rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
         text-align: justify;
+        color:black;
+        //font-weight: bold;
+        font-family: $baseFont;
       }
     }
+  }
+}
+
+//---------------TEAM PAGE -----------------
+
+.team {
+  width: 100%;
+  padding: 8em 0;
+  background: #f3f3f3;
+  .team_memb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5em;
+    .team_left {
+      width: 30%;
+      margin-right: 3em;
+      .team_profile_info {
+        background: $whiteOne;
+        padding: 1.5em 2em;
+        h1 {
+          @include h1style;
+          font-size: 3rem;
+          letter-spacing: 0;
+        }
+        h4 {
+          font-size: 1.6rem;
+          font-family: $baseFont;
+          color: #959595;
+        }
+        h2{
+          margin-top: 2em;
+          @include h2style;
+        }
+        h3{
+          font-size: 1.7rem;
+          color: $blueOne;
+          font-family: $headFont;
+          letter-spacing: 1px;
+          font-weight: normal;
+        }
+        .team_icons{
+          padding: 1em 1em;
+          padding-top: 4em;
+          ion-icon{
+            font-size: 1.6rem;
+            margin-right: 1em;
+            padding: 1em;
+            background: $blueOne;
+            color: $whiteOne;
+            transition: $transition;
+            &:hover{
+              background: $beachOne;
+            }
+          }
+        }
+      }
+    }
+    .team_right {
+      width: 70%;
+      margin-left: 2em;
+      h1{
+        @include h1style;
+        font-size: 3.8rem;
+        margin-bottom: .5em;
+      }
+      p{
+        font-size: 1.7rem;
+        margin-top: 1.5em;
+        color: black;
+        font-weight: normal;
+        text-align: justify;
+        text-transform: capitalize;
+        line-height: 2.8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  html {
+    font-size: 60.5%;
+  }
+  header {
+    .head_content {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+    .mobile_nav {
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      .mobile_nav_top {
+        width: 100%;
+        padding: 1em 2em;
+        background: $blueOne;
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1000;
+        .mobile_nav_logo {
+          width: 50%;
+          margin-left: 2em;
+          .nav_logo {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .head_logo_icon {
+              margin-right: 0.7em;
+              img {
+                width: 65px;
+              }
+            }
+            .head_logo_txt {
+              color: $whiteOne;
+              h1 {
+                font-size: 2.5rem;
+                font-weight: normal;
+                letter-spacing: 1px;
+                border-bottom: 1px solid $whiteOne;
+                font-family: $headFont;
+                text-transform: uppercase;
+              }
+              h3 {
+                font-size: 1.7rem;
+                font-weight: 300;
+                font-family: $baseFont;
+                text-align: center;
+              }
+            }
+          }
+        }
+        .toggler_btns {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          margin-right: 3em;
+          .close {
+            display: none;
+            ion-icon {
+              font-size: 4.3rem;
+              color: $blueOne;
+              background: $whiteOne;
+              padding: 0.2em;
+            }
+          }
+          .open {
+            display: block;
+            ion-icon {
+              font-size: 4.3rem;
+              color: $blueOne;
+              background: $whiteOne;
+              padding: 0.2em;
+            }
+          }
+        }
+      }
+      .mobile_nav_bottom {
+        width: 100%;
+        background: $whiteOne;
+        padding: 2em 5em;
+        transform: translateY(-200%);
+        transition: transform .5s ease-in-out;
+        ul {
+          margin-bottom: 2em;
+          li {
+            margin: 1.5em 0;
+            border-bottom: 1px solid #c7cad0;
+            a {
+              font-size: 1.5rem;
+              color: $blueOne;
+              text-transform: uppercase;
+              font-family: $baseFont;
+              font-weight: bold;
+              letter-spacing: 1.5px;
+              padding-bottom: 1em;
+              display: inline-block;
+              transition: $transition;
+              &:hover{
+                color: $beachOne;
+              }
+            }
+          }
+        }
+        .consult {
+          margin-top: 3.5em;
+          margin-bottom: 1.7em;
+          a {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $whiteOne;
+            background: $beachOne;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 1em 2em;
+            font-family: $baseFont;
+            transition: $transition;
+            &:hover{
+              background: $blueOne;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    .client_left {
+      width: 630px;
+      height: 500px;
+    }
+  }
+  .about {
+    padding: 8em 3em;
+  }
+  .main {
+    .main_displays {
+      .cards {
+        .single_card {
+          .card_txt {
+            padding: 1em 2em;
+          }
+        }
+      }
+    }
+  }
+  .common_head {
+    .common_header {
+      nav {
+        display: none;
+      }
+      .mobile_nav {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        .mobile_nav_top {
+          width: 100%;
+          padding: 1em 2em;
+          background: $blueOne;
+          height: 85px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          z-index: 1000;
+          .mobile_nav_logo {
+            width: 50%;
+            margin-left: 2em;
+            .nav_logo {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              .head_logo_icon {
+                margin-right: 0.7em;
+                img {
+                  width: 65px;
+                }
+              }
+              .head_logo_txt {
+                color: $whiteOne;
+                h1 {
+                  font-size: 2.5rem;
+                  font-weight: normal;
+                  letter-spacing: 1px;
+                  border-bottom: 1px solid $whiteOne;
+                  font-family: $headFont;
+                  text-transform: uppercase;
+                }
+                h3 {
+                  font-size: 1.7rem;
+                  font-weight: 300;
+                  font-family: $baseFont;
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .toggler_btns {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 3em;
+            .close {
+              display: none;
+              ion-icon {
+                font-size: 4.3rem;
+                color: $blueOne;
+                background: $whiteOne;
+                padding: 0.2em;
+              }
+            }
+            .open {
+              ion-icon {
+                font-size: 4.3rem;
+                color: $blueOne;
+                background: $whiteOne;
+                padding: 0.2em;
+              }
+            }
+          }
+        }
+        .mobile_nav_bottom {
+          width: 100%;
+          background: $whiteOne;
+          padding: 2em 5em;
+          transform: translateY(-200%);
+          transition: all 0.5s ease-in-out;
+          ul {
+            margin-bottom: 2em;
+            li {
+              margin: 1.5em 0;
+              border-bottom: 1px solid #c7cad0;
+              a {
+                font-size: 1.5rem;
+                color: $blueOne;
+                text-transform: uppercase;
+                font-family: $baseFont;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                padding-bottom: 1em;
+                display: inline-block;
+                transition: $transition;
+                &:hover{
+                  color: $beachOne;
+                }
+              }
+            }
+          }
+          .consult {
+            margin-top: 3.5em;
+            margin-bottom: 1.7em;
+            a {
+              font-size: 1.6rem;
+              font-weight: bold;
+              color: $whiteOne;
+              background: $beachOne;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              padding: 1em 2em;
+              font-family: $baseFont;
+              transition: $transition;
+              &:hover{
+                background: $blueOne;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .choose {
+    .choose_us {
+      padding-left: 5em;
+      .dark_lib {
+        display: none;
+      }
+    }
+  }
+  .common_head {
+    .common_header {
+      .common_header_main {
+        h1 {
+          margin-top: 2.8em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1210px) {
+  .clients {
+    .client_say {
+      .our_clients {
+        .hammer {
+          top: 15px;
+          left: 200px;
+          z-index: -1;
+          width: 500px;
+        }
+      }
+    }
+    .client_left {
+      width: 550px;
+      height: 480px;
+    }
+  }
+  .about {
+    padding: 7em 1em;
+    .home_about_cont {
+      .about_right {
+        padding-left: 6em;
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  .s_f {
+    .second_footer {
+      h1 {
+        font-size: 5.5rem;
+      }
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  footer {
+    .web_footer {
+      padding-left: 2em;
+      padding-right: 2em;
+      .news_letter {
+        .news_cont {
+          padding: 3em 2em;
+          span {
+            padding: 2em 1.3em;
+            input {
+              width: 65%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .services {
+    .home_services {
+      padding-left: 0;
+      padding-right: 0;
+      .services_container {
+        padding-left: 0;
+        padding-right: 0;
+        .service_cards {
+          padding-left: 0;
+          padding-right: 0;
+          .single_card {
+            width: 330px;
+            height: 110px;
+            padding: 0 1.5em;
+            margin-bottom: 3em;
+            .card_icon {
+              margin-right: 1.3em;
+              ion-icon {
+                font-size: 3.8rem;
+                padding: 0.2em;
+              }
+            }
+            .card_txt {
+              h1 {
+                font-size: 2.8rem;
+              }
+            }
+            .right_mark {
+              right: 25px;
+              bottom: 10px;
+              font-size: 2.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .clients {
+    .client_say {
+      .our_clients {
+        .hammer {
+          top: 15px;
+          left: 180px;
+          z-index: -1;
+          width: 500px;
+        }
+      }
+    }
+    .client_left {
+      width: 530px;
+      height: 550px;
+    }
+  }
+  .s_f {
+    .second_footer {
+      h1 {
+        font-size: 5rem;
+      }
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .services {
+    .home_services {
+      .services_container {
+        .service_cards {
+          .single_card {
+            width: 315px;
+          }
+        }
+      }
+    }
+  }
+  .aboutus {
+    padding-left: 2em;
+    padding-right: 2em;
+    .aboutus_cont {
+      .left {
+        display: none;
+      }
+      .right {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        .right_footer {
+          flex-direction: column;
+          .right_left {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .experience {
+              width: 50%;
+            }
+            .success {
+              width: 50%;
+              margin-bottom: 2em;
+              margin-left: 1em;
+            }
+          }
+          .right_right {
+            width: 100%;
+            margin-left: 0;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .common_head {
+    .common_header {
+      .common_header_main {
+        h1 {
+          margin-top: 3em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+  .about {
+    .home_about_cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .about_left {
+        width: 100%;
+        margin-bottom: 8em;
+        &::after {
+          display: none;
+        }
+      }
+      .about_right {
+        width: 100%;
+      }
+    }
+    .bg_img1 {
+      width: 50%;
+      right: 35px;
+      opacity: 0.16;
+    }
+  }
+  .services {
+    .home_services {
+      .services_container {
+        .service_cards {
+          grid-template-columns: 1fr 1fr;
+          .single_card {
+            width: 380px;
+            height: 120px;
+          }
+        }
+        .services_more {
+          font-size: 1.5rem;
+          font-family: $baseFont;
+          font-weight: bold;
+          padding: 1em 2em;
+          background: $blueOne;
+          color: $whiteOne;
+          text-transform: uppercase;
+          display: block;
+          text-align: center;
+          width: 30%;
+          margin: 3em auto;
+          margin-bottom: 0;
+          transition: $transition;
+          &:hover {
+            background: $beachOne;
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    .client_say {
+      width: 100%;
+      margin-left: none;
+      .our_clients {
+        .client_right {
+          width: 100%;
+        }
+      }
+    }
+    .client_left {
+      display: none;
+    }
+  }
+  .s_f {
+    .second_footer {
+      flex-wrap: wrap;
+    }
+  }
+  .work {
+    .how_work {
+      .work_process {
+        .process_cards {
+          .single_proc {
+            .icon {
+              width: 110px;
+              height: 110px;
+              ion-icon {
+                font-size: 4.8rem;
+              }
+            }
+          }
+          .repeat_icon_cont {
+            margin: 0 0.3em;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    .main_displays {
+      padding: 8em 0;
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .single_card {
+          width: 100%;
+          margin-top: 10em;
+          margin-bottom: 10em;
+          border-right: none;
+          .card_bg {
+            top: -60px;
+            left: 43%;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .web_footer {
+      flex-wrap: wrap;
+      .info_cont {
+        width: 70%;
+        padding-left: 3.5em;
+      }
+      .explore {
+        width: 30%;
+      }
+      .news_letter {
+        width: 70%;
+        margin-top: 5em;
+        margin-left: 3.5em;
+      }
+    }
+  }
+  .common_head {
+    .common_header {
+      .common_header_main {
+        h1 {
+          margin-top: 3.5em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .services {
+    .home_services {
+      .services_container {
+        width: 100%;
+        .service_cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+  .work {
+    .how_work {
+      .work_process {
+        .process_cards {
+          flex-direction: column;
+          .repeat_icon_cont {
+            ion-icon {
+              transform: rotate(90deg);
+              margin-top: 0.3em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    .client_say {
+      .our_clients {
+        .hammer {
+          top: 15px;
+          left: 0px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  .our_vision {
+    .vision_cont {
+      flex-direction: column;
+      .vision_lft {
+        width: 100%;
+        padding-right: 0;
+        display: none;
+      }
+      .vision_right {
+        width: 100%;
+        padding-left: 2em;
+      }
+    }
+  }
+  .contact_page {
+    .contact_us_cont {
+      flex-direction: column;
+      .contact_left {
+        width: 100%;
+        margin-right: 0;
+      }
+      .contact_right {
+        width: 100%;
+        margin-top: 5em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 46%;
+  }
+  .services {
+    .home_services {
+      .services_container {
+        .service_cards {
+          .single_card {
+            width: 310px;
+            height: 120px;
+          }
+        }
+      }
+    }
+  }
+  header {
+    .hero {
+      .hero_banner {
+        .hero_logo {
+          width: 80px;
+          img {
+            width: 80px;
+          }
+        }
+        .hero_banner_txt {
+          h1 {
+            font-size: 4.8rem;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    .main_displays {
+      .cards {
+        .single_card {
+          padding: 0 2em;
+        }
+      }
+    }
+  }
+  .s_f {
+    height: 250px;
+    .second_footer {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+  footer {
+    .web_footer {
+      flex-direction: column;
+      .info_cont {
+        width: 100%;
+      }
+      .explore {
+        width: 100%;
+        padding-left: 3.5em;
+        margin-top: 5em;
+      }
+      .news_letter {
+        width: 80%;
+        .news_cont {
+          width: 100%;
+          padding: 2.3em 1.7em;
+          span {
+            input {
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about {
+    .home_about_cont {
+      .about_right {
+        padding-left: 1em;
+      }
+    }
+  }
+  .common_head {
+    .common_header {
+      .common_header_main {
+        h1 {
+          margin-top: 4.8em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 43%;
+  }
+  .about {
+    .home_about_cont {
+      .about_right {
+        .about_btn {
+          a {
+            font-size: 1.3rem;
+            padding: 0.8em 1.6em;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .web_footer {
+      .news_letter {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .services {
+    .home_services {
+      .services_container {
+        .service_cards {
+          .single_card {
+            width: 280px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  html {
+    font-size: 35%;
   }
 }

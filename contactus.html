@@ -43,6 +43,39 @@
             </div>
           </div>
         </nav>
+        <div class="mobile_nav">
+          <div class="mobile_nav_top">
+            <div class="mobile_nav_logo">
+              <div class="nav_logo">
+                <!-- ICON -->
+                <div class="head_logo_icon">
+                  <img src="images/logo.png" alt="" />
+                </div>
+                <!-- TEXT -->
+                <div class="head_logo_txt">
+                  <h1>Universal</h1>
+                  <h3>Legal Association</h3>
+                </div>
+              </div>
+            </div>
+            <div class="toggler_btns">
+              <div class="open"><ion-icon name="menu-outline"></ion-icon></div>
+              <div class="close"><ion-icon name="menu-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="mobile_nav_bottom">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="consult">
+              <a href="#">get consult</a>
+            </div>
+          </div>
+        </div>
         <div class="common_header_main">
           <h1>Contact Us</h1>
         </div>
@@ -90,23 +123,51 @@
         <div class="contact_right">
           <h2>// contact us</h2>
           <h1>Get In Touch with us</h1>
-          <div class="name">
-            <input type="text" placeholder="your name*" required />
-            <input type="emai" placeholder="your email*" required />
-          </div>
-          <div class="phone">
-            <input type="text" placeholder="your phone*" required />
-            <input type="text" placeholder="your subject*" required />
-          </div>
-          <textarea
-            name="message"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="message"
-          ></textarea>
-          <br />
-          <a href="#">Send message</a>
+          <form
+            action="https://formsubmit.co/darshanahire15@gmail.com"
+            method="POST"
+          >
+            <div class="name">
+              <input
+                type="text"
+                placeholder="your name*"
+                name="name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="your email*"
+                name="email"
+                required
+              />
+            </div>
+            <div class="phone">
+              <input
+                type="text"
+                placeholder="your phone*"
+                required
+                name="Phone No:"
+              />
+              <input
+                type="text"
+                placeholder="your subject*"
+                required
+                id="sub"
+                name="Subject"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="New Mail Arrived!">
+            </div>
+            <textarea
+              name="message"
+              id="msg"
+              cols="30"
+              rows="10"
+              placeholder="message"
+            ></textarea>
+            <br />
+            <button type="submit">Send message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -198,5 +259,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
