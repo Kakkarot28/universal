@@ -184,7 +184,7 @@ header .head_content .head_mail .head_mail_txt h3 {
 }
 
 header .head_content .head_mail .head_mail_txt h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: "Frank Ruhl Libre", serif;
   font-weight: normal;
   letter-spacing: 1px;
@@ -460,6 +460,7 @@ header .mobile_nav {
 .main .main_displays .cards .single_card .card_txt p {
   font-size: 1.7rem;
   font-weight: normal;
+  text-transform: capitalize;
 }
 
 .about {
@@ -1161,7 +1162,6 @@ footer .web_footer .info_cont .head_logo .head_logo_txt h3 {
 footer .web_footer .info_cont p {
   font-size: 1.5rem;
   font-family: "Karla", sans-serif;
-  letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 1.5em;
   opacity: 0.7;
@@ -1522,7 +1522,7 @@ footer .sub_foot p {
 
 .aboutus .aboutus_cont .right .right_head p {
   font-size: 1.5rem;
-  letter-spacing: 1px;
+  text-transform: capitalize;
   text-align: justify;
   color: #868686;
   font-weight: bold;
@@ -1773,7 +1773,7 @@ footer .sub_foot p {
 .choose .choose_us .choose_left h3 ion-icon {
   color: #b68c5a;
   font-size: 2.5rem;
-  margin-right: .5em;
+  margin-right: 0.5em;
   --ionicon-stroke-width: 65px;
 }
 
@@ -2090,6 +2090,10 @@ footer .sub_foot p {
   font-family: "Karla", sans-serif;
 }
 
+.our_services_sec .services_cont .nav_box {
+  display: none;
+}
+
 .team {
   width: 100%;
   padding: 8em 0;
@@ -2186,7 +2190,7 @@ footer .sub_foot p {
   color: #162542;
   letter-spacing: 1px;
   font-size: 3.8rem;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .team .team_memb .team_right p {
@@ -2310,10 +2314,10 @@ footer .sub_foot p {
     padding: 2em 5em;
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
-    -webkit-transition: -webkit-transform .5s ease-in-out;
-    transition: -webkit-transform .5s ease-in-out;
-    transition: transform .5s ease-in-out;
-    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   }
   header .mobile_nav .mobile_nav_bottom ul {
     margin-bottom: 2em;
@@ -2662,6 +2666,12 @@ footer .sub_foot p {
   .common_head .common_header .common_header_main h1 {
     margin-top: 3em;
   }
+  .team .team_memb .team_left {
+    width: 40%;
+  }
+  .team .team_memb .team_right {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -2851,6 +2861,113 @@ footer .sub_foot p {
     width: 100%;
     margin-top: 5em;
   }
+  .our_services_sec .services_cont {
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .our_services_sec .services_cont .services_left {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    padding-right: 2em;
+    border: 1px solid #b68c5a;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .our_services_sec .services_cont .services_left h1 {
+    padding-left: 0.5em;
+  }
+  .our_services_sec .services_cont .services_right {
+    width: 100%;
+    padding-left: 1em;
+  }
+  .our_services_sec .services_cont .nav_box {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    padding: 1.7em;
+    background: #162542;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .our_services_sec .services_cont .nav_box #setting {
+    font-size: 3.5rem;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .our_services_sec .services_cont .nav_box #setting:hover {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .our_services_sec .services_cont .nav_box #setClose {
+    display: none;
+    font-size: 3.5rem;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .our_services_sec .services_cont .nav_box #setClose:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  .our_services_sec .services_cont .nav_box #settingSect {
+    font-size: 3.5rem;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .our_services_sec .services_cont .nav_box #settingSect:hover {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  .our_services_sec .services_cont .nav_box #setSectClose {
+    display: none;
+    font-size: 3.5rem;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .our_services_sec .services_cont .nav_box #setSectClose:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  .our_services_sec .services_cont .nav_box:hover {
+    background: #b68c5a;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .team .team_memb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .team .team_memb .team_left {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  .team .team_memb .team_right {
+    width: 100%;
+    margin: 0;
+  }
+  .our_services_sec .services_cont .services_left {
+    width: 50%;
+  }
+  .our_services_sec .services_cont .services_left h1 {
+    padding-left: 1em;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2908,6 +3025,12 @@ footer .sub_foot p {
   }
   .common_head .common_header .common_header_main h1 {
     margin-top: 4.8em;
+  }
+  .our_services_sec .services_cont .services_left {
+    width: 80%;
+  }
+  .our_services_sec .services_cont .services_left h1 {
+    padding-left: 1.5em;
   }
 }
 

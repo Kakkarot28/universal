@@ -143,7 +143,7 @@ header {
           color: $beachOne;
         }
         h1 {
-          font-size: 2rem;
+          font-size: 1.7rem;
           font-family: $headFont;
           font-weight: normal;
           letter-spacing: 1px;
@@ -350,6 +350,7 @@ header {
           p {
             font-size: 1.7rem;
             font-weight: normal;
+            text-transform: capitalize;
           }
         }
       }
@@ -903,7 +904,7 @@ footer {
       p {
         font-size: 1.5rem;
         font-family: $baseFont;
-        letter-spacing: 1px;
+        
         text-transform: capitalize;
         margin-bottom: 1.5em;
         opacity: 0.7;
@@ -1196,7 +1197,7 @@ footer {
         }
         p {
           font-size: 1.5rem;
-          letter-spacing: 1px;
+         text-transform: capitalize;
           text-align: justify;
           color: #868686;
           font-weight: bold;
@@ -1381,10 +1382,10 @@ footer {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        ion-icon{
+        ion-icon {
           color: $beachOne;
           font-size: 2.5rem;
-          margin-right: .5em;
+          margin-right: 0.5em;
           --ionicon-stroke-width: 65px;
         }
       }
@@ -1558,7 +1559,6 @@ footer {
             width: 12%;
             color: $beachOne;
             font-size: 2.3rem;
-           
           }
           a {
             width: 88%;
@@ -1603,10 +1603,13 @@ footer {
         font-size: 1.6rem;
         line-height: 2.8rem;
         text-align: justify;
-        color:black;
+        color: black;
         //font-weight: bold;
         font-family: $baseFont;
       }
+    }
+    .nav_box{
+      display: none;
     }
   }
 }
@@ -1638,28 +1641,28 @@ footer {
           font-family: $baseFont;
           color: #959595;
         }
-        h2{
+        h2 {
           margin-top: 2em;
           @include h2style;
         }
-        h3{
+        h3 {
           font-size: 1.7rem;
           color: $blueOne;
           font-family: $headFont;
           letter-spacing: 1px;
           font-weight: normal;
         }
-        .team_icons{
+        .team_icons {
           padding: 1em 1em;
           padding-top: 4em;
-          ion-icon{
+          ion-icon {
             font-size: 1.6rem;
             margin-right: 1em;
             padding: 1em;
             background: $blueOne;
             color: $whiteOne;
             transition: $transition;
-            &:hover{
+            &:hover {
               background: $beachOne;
             }
           }
@@ -1669,12 +1672,12 @@ footer {
     .team_right {
       width: 70%;
       margin-left: 2em;
-      h1{
+      h1 {
         @include h1style;
         font-size: 3.8rem;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
       }
-      p{
+      p {
         font-size: 1.7rem;
         margin-top: 1.5em;
         color: black;
@@ -1779,7 +1782,7 @@ footer {
         background: $whiteOne;
         padding: 2em 5em;
         transform: translateY(-200%);
-        transition: transform .5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
         ul {
           margin-bottom: 2em;
           li {
@@ -1795,7 +1798,7 @@ footer {
               padding-bottom: 1em;
               display: inline-block;
               transition: $transition;
-              &:hover{
+              &:hover {
                 color: $beachOne;
               }
             }
@@ -1814,7 +1817,7 @@ footer {
             padding: 1em 2em;
             font-family: $baseFont;
             transition: $transition;
-            &:hover{
+            &:hover {
               background: $blueOne;
             }
           }
@@ -1943,7 +1946,7 @@ footer {
                 padding-bottom: 1em;
                 display: inline-block;
                 transition: $transition;
-                &:hover{
+                &:hover {
                   color: $beachOne;
                 }
               }
@@ -1962,7 +1965,7 @@ footer {
               padding: 1em 2em;
               font-family: $baseFont;
               transition: $transition;
-              &:hover{
+              &:hover {
                 background: $blueOne;
               }
             }
@@ -2164,6 +2167,16 @@ footer {
         h1 {
           margin-top: 3em;
         }
+      }
+    }
+  }
+  .team {
+    .team_memb {
+      .team_left {
+        width: 40%;
+      }
+      .team_right {
+        width: 60%;
       }
     }
   }
@@ -2379,6 +2392,105 @@ footer {
       }
     }
   }
+  .our_services_sec {
+    .services_cont {
+      position: relative;
+      transition: $transition;
+      .services_left {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $whiteOne;
+        transform: translateX(0);
+        padding-right: 2em;
+        border: 1px solid $beachOne;
+        padding-top: 2em;
+        padding-bottom: 0.5em;
+        transform: translateX(-150%);
+        transition: $transition;
+        h1 {
+          padding-left: 0.5em;
+        }
+      }
+      .services_right {
+        width: 100%;
+        padding-left: 1em;
+      }
+      .nav_box {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: 1.7em;
+        background: $blueOne;
+        transition: $transition;
+        #setting {
+          font-size: 3.5rem;
+          color: $whiteOne;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: rotate(240deg);
+          }
+        }
+        #setClose {
+          display: none;
+          font-size: 3.5rem;
+          color: $whiteOne;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: rotate(360deg); 
+          }
+        }
+        #settingSect {
+          font-size: 3.5rem;
+          color: $whiteOne;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: rotate(240deg);
+          }
+        }
+        #setSectClose {
+          display: none;
+          font-size: 3.5rem;
+          color: $whiteOne;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            transform: rotate(360deg); 
+          }
+        }
+        &:hover {
+          background: $beachOne;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .team {
+    .team_memb {
+      flex-direction: column;
+      .team_left {
+        width: 100%;
+        margin-bottom: 3em;
+      }
+      .team_right {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  .our_services_sec {
+    .services_cont {
+      .services_left {
+        width: 50%;
+        h1 {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2472,6 +2584,16 @@ footer {
       }
     }
   }
+  .our_services_sec {
+    .services_cont {
+      .services_left {
+        width: 80%;
+        h1 {
+          padding-left: 1.5em;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -2519,3 +2641,4 @@ footer {
     font-size: 35%;
   }
 }
+
