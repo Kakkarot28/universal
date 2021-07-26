@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Services</title>
     <link rel="stylesheet" href="sass/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section class="common_head">
@@ -83,7 +84,7 @@
     </section>
     <section class="our_services_sec">
       <div class="services_cont container">
-        <div class="services_left">
+        <div class="services_left" data-aos="flip-right">
           <h1>Practice Areas</h1>
           <ul>
             <li class="services_list_item" id="0">
@@ -125,11 +126,14 @@
           </ul>
         </div>
         <div class="services_right">
-          <h2>// explanation</h2>
-          <h1 id="item_name">Project Development Contract</h1>
+          <h2 data-aos="fade-down">// explanation</h2>
+          <h1 data-aos="fade-down" id="item_name">Project Development Contract</h1>
           <h6 id="item_txt">
             Project Development Agreement means any one or more agreements, including any amendments thereto, between a master developer and any co-developer or subdeveloper in connection with a STAR bond project, which project development agreement may include the political subdivision as a party.
           </h6>
+          <div class="cnt">
+            <a href="contactus.html"><span>contact us for more detailed enquires</span><ion-icon name="play-forward-outline"></ion-icon></a>
+          </div>
           <div class="underline"></div>
           <p id="item_subtxt">
             Project Development Agreement means any one or more agreements, including any amendments thereto, between a master developer and any co-developer or subdeveloper in connection with a STAR bond project, which project development agreement may include the political subdivision as a party.An agreement between two or more parties to accomplish a certain goal in a certain way. ... Project contracts are important to have in the event of a dispute.A contract is an agreement that is executed between two or more parties, that can include terms such as payments, marketing reporting requirements, proposals and procurement statement of work. ... A legal contract includes an offer, acceptance of that offer, consideration, legal capacity and legal purpose.As projects grow larger in scope, Project Managers are asked to increase their understanding of concepts like Contract Management to ensure the project is successful. Complex projects, involving many suppliers and contractors, can quickly derail if enough attention isn’t paid to the details contained in a contract. The formation of contracts is a key point in a project when Project Managers must have strong foundations to ensure Procurement and Risk functions are considered.
@@ -144,7 +148,7 @@
     <hr />
     <section class="our_services_sec">
       <div class="services_cont container">
-        <div class="services_left" id="leftSide">
+        <div class="services_left" data-aos="flip-right" id="leftSide">
           <h1>Sectors</h1>
           <ul>
             <li class="sector_list_items" id="0">
@@ -173,11 +177,14 @@
           </ul>
         </div>
         <div class="services_right">
-          <h2>// explanation</h2>
-          <h1 id="sector_heading" >Banking & Finance          </h1>
+          <h2 data-aos="fade-down">// explanation</h2>
+          <h1 data-aos="fade-down" id="sector_heading" >Banking & Finance          </h1>
           <h6  id="sector_txt">
             The financial services sector provides financial services to people and corporations. This segment of the economy is made up of a variety of financial firms including banks, investment houses, lenders, finance companies, real estate brokers, and insurance companies. As noted above, the financial services industry is probably the most important sector of the economy, leading the world in terms of earnings and equity market capitalization. Large conglomerates dominate this sector, but it also includes a diverse range of smaller companies.
           </h6>
+          <div class="cnt">
+            <a href="contactus.html"><span>contact us for more detailed enquires</span><ion-icon name="play-forward-outline"></ion-icon></a>
+          </div>
           <div class="underline"></div>
           <p  id="sector_subtxt">
             Companies in the financial services industry manage money. For instance, a financial advisor manages assets and offers advice on behalf of a client. The advisor does not directly provide investments or any other product, rather, they facilitate the movement of funds between savers and the issuers of securities and other instruments. This service is a temporary task rather than a tangible asset.
@@ -191,7 +198,7 @@
     </section>
     <section class="s_f">
       <div class="second_footer container">
-        <h1>
+        <h1 data-aos="zoom-in-down">
           WE’RE DELIVERING THE BEST <br />
           CUSTOMER EXPERIENCE
         </h1>
@@ -200,7 +207,7 @@
     </section>
     <footer>
       <div class="web_footer container">
-        <div class="info_cont">
+        <div class="info_cont" data-aos="zoom-in">
       <!------------------- HEAD LOGO STARTS HERE ----------------->
                   <div class="head_logo">
                       <!-- ICON -->
@@ -247,6 +254,10 @@
       </div>
     </footer>
     <!-- SCRIPTS STARTS HERE -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

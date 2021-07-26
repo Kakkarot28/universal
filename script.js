@@ -11,3 +11,16 @@ getClose.addEventListener("click", function() {
   getOpen.style.display = `block`;
   getClose.style.display = `none`;
 });
+
+function popUp() {
+  const popEl = document.createElement("a");
+  popEl.setAttribute("href", "contactus.html");
+
+  popEl.innerHTML = `    <div class="pop_up">
+<ion-icon name="chatbubble-ellipses-sharp" id="pop_msg"></ion-icon>
+</div>`;
+
+  document.body.appendChild(popEl);
+}
+
+popUp();

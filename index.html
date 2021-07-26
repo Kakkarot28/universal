@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lawyer</title>
     <link rel="stylesheet" href="sass/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
   <body>
     <!----------------------- HEADER STARTS HERE ----------------->
@@ -107,7 +109,7 @@
         </div>
       </div>
       <div class="hero">
-        <div class="hero_banner">
+        <div class="hero_banner"  data-aos="fade-down">
           <div class="hero_logo">
               <img src="images/logo.png" alt="">
           </div>
@@ -133,7 +135,7 @@
           <!-------- SINGLE CARD STARTS HERE --------->
           <div
             style="border-left: 1px solid rgba(255, 255, 255, 0.144)"
-            class="single_card"
+            class="single_card" data-aos="flip-right"
           >
             <div class="card_bg"></div>
             <div class="card_icon">
@@ -145,7 +147,7 @@
             </div>
           </div>
           <!-------- SINGLE CARD STARTS HERE --------->
-          <div class="single_card">
+          <div class="single_card" data-aos="flip-right">
             <div class="card_bg"></div>
             <div class="card_icon">
               <ion-icon name="school-outline"></ion-icon>
@@ -156,7 +158,7 @@
             </div>
           </div>
           <!-------- SINGLE CARD STARTS HERE --------->
-          <div class="single_card">
+          <div class="single_card" data-aos="flip-right">
             <div class="card_bg"></div>
             <div class="card_icon">
               <ion-icon name="ribbon-outline"></ion-icon>
@@ -176,12 +178,12 @@
         class="bg_img1"
       />
       <div class="home_about_cont container">
-        <div class="about_left">
-          <img src="images/aboutus1.jpeg" alt="" />
+        <div class="about_left" data-aos="zoom-in">
+          <img src="images/aboutus1.jpeg" alt="" /> 
         </div>
         <div class="about_right">
-          <h2>// What we Do & about us</h2>
-          <h1>
+          <h2 data-aos="fade-down">// What we Do & about us</h2>
+          <h1 data-aos="fade-down">
             UNIVERSAL LEGAL ASSOCIATE'S
           </h1>
           <p>
@@ -223,13 +225,13 @@
     <section class="services">
       <div class="home_services container">
         <div class="services_head">
-          <h2>// Practice Areas</h2>
-          <h1>Having a Lawyer on Your Side</h1>
+          <h2  data-aos="fade-down">// Practice Areas</h2>
+          <h1  data-aos="fade-down">Having a Lawyer on Your Side</h1>
         </div>
         <div class="services_container">
           <div class="service_cards">
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card"data-aos="flip-up" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="hammer-outline"></ion-icon>
               </div>
@@ -244,7 +246,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card"data-aos="flip-up" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="ear-outline"></ion-icon>
               </div>
@@ -259,7 +261,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card"data-aos="flip-up" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="newspaper-outline"></ion-icon>
               </div>
@@ -274,7 +276,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="disc-outline"></ion-icon>
               </div>
@@ -289,7 +291,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="document-lock-outline"></ion-icon>
               </div>
@@ -304,7 +306,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                 <ion-icon name="cash-outline"></ion-icon>
               </div>
@@ -319,7 +321,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                   <ion-icon name="business-outline"></ion-icon>
               </div>
@@ -334,7 +336,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                   <ion-icon name="receipt-outline"></ion-icon>
               </div>
@@ -349,7 +351,7 @@
               ></ion-icon>
             </div>
             <!-- SERVICES SINGLE CARD -->
-            <div class="single_card">
+            <div class="single_card" data-aos="flip-up">
               <div class="card_icon">
                   <ion-icon name="finger-print-outline"></ion-icon>
               </div>
@@ -371,12 +373,12 @@
     <section class="work">
       <div class="how_work container">
         <div class="work_head">
-          <h3>// Our Working Process</h3>
-          <h1>how we solve your problems</h1>
+          <h3 data-aos="fade-down">// Our Working Process</h3>
+          <h1 data-aos="fade-down">how we solve your problems</h1>
         </div>
         <div class="work_process">
           <div class="process_cards">
-            <!-- SINGLE -->
+   <!-- SINGLE -->
           <div class="single_proc">
             <div class="icon">
                 <ion-icon name="funnel-outline"></ion-icon>
@@ -386,11 +388,11 @@
                 </h1>
             </div>
           </div>
-          <div class="repeat_icon_cont">
+          <div class="repeat_icon_cont"  data-aos="fade-up">
               <ion-icon name="repeat-outline"></ion-icon>
           </div>
-                      <!-- SINGLE -->
-                      <div class="single_proc">
+   <!-- SINGLE -->
+        <div class="single_proc">
                           <div class="icon">
                               <ion-icon name="layers-outline"></ion-icon>
                           </div>
@@ -398,32 +400,32 @@
                             <h1>Split solution into parts
                               </h1>
                           </div>
-                        </div>
-                        <div class="repeat_icon_cont">
-                            <ion-icon name="repeat-outline"></ion-icon>
-                        </div>
-                                    <!-- SINGLE -->
+          </div>
+          <div class="repeat_icon_cont"  data-aos="fade-up">
+              <ion-icon name="repeat-outline"></ion-icon>
+          </div>
+   <!-- SINGLE -->
           <div class="single_proc">
-              <div class="icon">
-                  <ion-icon name="hourglass-outline"></ion-icon>
-              </div>
-              <div class="txt">
-                <h1>Analyzing method
-                  </h1>
-              </div>
-            </div>
-            <div class="repeat_icon_cont">
-                <ion-icon name="repeat-outline"></ion-icon>
-            </div>
-                        <!-- SINGLE -->
+      <div class="icon">
+          <ion-icon name="hourglass-outline"></ion-icon>
+      </div>
+      <div class="txt">
+         <h1>Analyzing method
+          </h1>
+      </div>
+     </div>
+    <div class="repeat_icon_cont"  data-aos="fade-up">
+        <ion-icon name="repeat-outline"></ion-icon>
+   </div>
+          <!-- SINGLE -->
           <div class="single_proc">
-              <div class="icon">
-                  <ion-icon name="happy-outline"></ion-icon>
-              </div>
+   <div class="icon">
+          <ion-icon name="happy-outline"></ion-icon>
+      </div>
               <div class="txt">
-                <h1>Happy final results
-                  </h1>
-              </div>
+        <h1>Happy final results
+       </h1>
+    </div>
             </div>
         </div>
         </div>
@@ -432,7 +434,7 @@
     </section>
     <section class="clients">
       <div class="client_say">
-      <div class="our_clients container">
+      <div class="our_clients container" data-aos="zoom-in">
         <div class="client_right">
           <div class="reviews_head">
           <h2>// Reviews</h2>
@@ -443,7 +445,7 @@
                 <ion-icon name="sparkles-outline"></ion-icon>
             </div>
             <div class="review_txt_cont">
-              <p id="review_txt">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eius obcaecati aliquam nemo amet libero ex repellendus odit vel excepturi maxime consequatur exercitationem deserunt vitae quisquam ipsum, voluptatibus sapiente pariatur rem illum porro. Tenetur, voluptatibus. "</p>
+              <p  id="review_txt">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eius obcaecati aliquam nemo amet libero ex repellendus odit vel excepturi maxime consequatur exercitationem deserunt vitae quisquam ipsum, voluptatibus sapiente pariatur rem illum porro. Tenetur, voluptatibus. "</p>
               <div class="client_profile">
                   <div class="client_info">
                     <div class="client_pic">
@@ -469,14 +471,14 @@
     </section>
     <section class="s_f">
     <div class="second_footer container">
-      <h1>WE’RE DELIVERING THE BEST <br>
+      <h1 data-aos="zoom-in-down">WE’RE DELIVERING THE BEST <br>
           CUSTOMER EXPERIENCE</h1>
           <a href="contactus.html">Let's get started</a>
     </div>
   </section>
   <footer>
     <div class="web_footer container">
-      <div class="info_cont">
+      <div class="info_cont" data-aos="zoom-in">
     <!------------------- HEAD LOGO STARTS HERE ----------------->
                 <div class="head_logo">
                     <!-- ICON -->
@@ -522,6 +524,7 @@
       <p>all <span> &copy;</span> copyrights reserved made in 2021 </p>
     </div>
   </footer>
+
     <!-- SCRIPTS STARTS HERE -->
     <script
       type="module"
@@ -595,5 +598,10 @@
           initialVal();
         });
     </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+    
   </body>
 </html>

@@ -39,8 +39,80 @@ img {
   margin: 0 auto;
   padding: 0 2em;
 }
-
+.error_cont{
+  text-align: center;
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  h1{
+    font-size: 25rem;
+    font-family: $headFont;
+    color: $blueOne;
+  }
+  h3{
+    font-size: 3rem;
+    color: $blueOne;
+    text-transform: uppercase;
+    font-family: $headFont;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-top: -35px;
+  }
+  a{
+    margin-top: 5rem;
+    display: inline-block;
+    padding: .5em .8em;
+    color: $whiteOne;
+    background: $beachOne;
+    font-size: 2rem;
+    font-family: $baseFont;
+    font-weight: bold;
+    transition: $transition;
+    &:hover{
+      background: $blueOne;
+    }
+  }
+}
 //----------STYLE STARTS HERE
+.pop_up{
+  position: fixed;
+  bottom: 2.5rem;
+  right: 3.5rem;
+  z-index: 10000;
+  transition: all .3s ease-in;
+  ion-icon{
+    font-size: 5rem;
+    color: $whiteOne;
+    background: $beachOne;
+    border-radius: 50%;
+     padding: .32em;
+     transition: all .3s ease-in;
+     box-shadow: 0 0 0 0 $beachOne;
+     transform: scale(1);
+     animation: pulse 1.7s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 #b68d5ac2;
+    }
+  
+    60% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 12px #b68d5a28;
+     
+    }
+  
+    100% {
+      transform: scale(0.88);
+      box-shadow: 0 0 0 0 #b68d5aa1;
+    }
+  }
+  &:hover ion-icon{
+    background:$blueOne;
+  }
+}
 //---------------HEADER STYLE
 header {
   width: 100%;
@@ -1555,6 +1627,7 @@ footer {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          cursor: pointer;
           ion-icon {
             width: 12%;
             color: $beachOne;
@@ -1592,6 +1665,32 @@ footer {
         font-size: 2rem;
         text-transform: capitalize;
         line-height: 3.2rem;
+      }
+      .cnt{
+        margin-top: 1em;
+        a{
+          width: auto;
+          font-size: 2.3rem;
+          display: flex;
+          align-items: center;
+          font-family: $headFont;
+          text-decoration: underline;
+          letter-spacing: 1px;
+          transition: $transition;
+          span{
+            margin-right: .3em;
+          }
+          ion-icon{
+            font-size: 2.8rem;
+            margin-bottom: -4px;
+          }
+          &:hover{
+            background: $blueOne;
+            text-decoration: none;
+            color: $whiteOne;
+            padding: .3em .8em;
+          }
+        }
       }
       .underline {
         width: 150px;
@@ -1689,6 +1788,8 @@ footer {
     }
   }
 }
+
+
 
 @media only screen and (max-width: 1250px) {
   html {
@@ -2593,6 +2694,9 @@ footer {
         }
       }
     }
+  }
+  .error_cont{
+    width: auto;
   }
 }
 

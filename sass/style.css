@@ -37,6 +37,117 @@ img {
   padding: 0 2em;
 }
 
+.error_cont {
+  text-align: center;
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.error_cont h1 {
+  font-size: 25rem;
+  font-family: "Frank Ruhl Libre", serif;
+  color: #162542;
+}
+
+.error_cont h3 {
+  font-size: 3rem;
+  color: #162542;
+  text-transform: uppercase;
+  font-family: "Frank Ruhl Libre", serif;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  margin-top: -35px;
+}
+
+.error_cont a {
+  margin-top: 5rem;
+  display: inline-block;
+  padding: .5em .8em;
+  color: #ffffff;
+  background: #b68c5a;
+  font-size: 2rem;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.error_cont a:hover {
+  background: #162542;
+}
+
+.pop_up {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 3.5rem;
+  z-index: 10000;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.pop_up ion-icon {
+  font-size: 5rem;
+  color: #ffffff;
+  background: #b68c5a;
+  border-radius: 50%;
+  padding: .32em;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  -webkit-box-shadow: 0 0 0 0 #b68c5a;
+          box-shadow: 0 0 0 0 #b68c5a;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: pulse 1.7s infinite;
+          animation: pulse 1.7s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 0 #b68d5ac2;
+            box-shadow: 0 0 0 0 #b68d5ac2;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 0 0 12px #b68d5a28;
+            box-shadow: 0 0 0 12px #b68d5a28;
+  }
+  100% {
+    -webkit-transform: scale(0.88);
+            transform: scale(0.88);
+    -webkit-box-shadow: 0 0 0 0 #b68d5aa1;
+            box-shadow: 0 0 0 0 #b68d5aa1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 0 #b68d5ac2;
+            box-shadow: 0 0 0 0 #b68d5ac2;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 0 0 12px #b68d5a28;
+            box-shadow: 0 0 0 12px #b68d5a28;
+  }
+  100% {
+    -webkit-transform: scale(0.88);
+            transform: scale(0.88);
+    -webkit-box-shadow: 0 0 0 0 #b68d5aa1;
+            box-shadow: 0 0 0 0 #b68d5aa1;
+  }
+}
+
+.pop_up:hover ion-icon {
+  background: #162542;
+}
+
 header {
   width: 100%;
   height: 100vh;
@@ -2018,6 +2129,7 @@ footer .sub_foot p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .our_services_sec .services_cont .services_left ul li ion-icon {
@@ -2073,6 +2185,42 @@ footer .sub_foot p {
   font-size: 2rem;
   text-transform: capitalize;
   line-height: 3.2rem;
+}
+
+.our_services_sec .services_cont .services_right .cnt {
+  margin-top: 1em;
+}
+
+.our_services_sec .services_cont .services_right .cnt a {
+  width: auto;
+  font-size: 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Frank Ruhl Libre", serif;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.our_services_sec .services_cont .services_right .cnt a span {
+  margin-right: .3em;
+}
+
+.our_services_sec .services_cont .services_right .cnt a ion-icon {
+  font-size: 2.8rem;
+  margin-bottom: -4px;
+}
+
+.our_services_sec .services_cont .services_right .cnt a:hover {
+  background: #162542;
+  text-decoration: none;
+  color: #ffffff;
+  padding: .3em .8em;
 }
 
 .our_services_sec .services_cont .services_right .underline {
@@ -3031,6 +3179,9 @@ footer .sub_foot p {
   }
   .our_services_sec .services_cont .services_left h1 {
     padding-left: 1.5em;
+  }
+  .error_cont {
+    width: auto;
   }
 }
 
